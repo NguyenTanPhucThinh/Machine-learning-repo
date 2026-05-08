@@ -2,7 +2,7 @@
 
 ## Mô Tả Bài Toán
 
-Dự án này nhằm giải quyết bài toán nhân diện nhân vật anime bằng cách sử dụng các mô hình học máy hiện đại. 
+Dự án này nhằm giải quyết bài toán nhận diện nhân vật anime bằng cách sử dụng các mô hình học máy hiện đại.
 
 ### Mục Tiêu Chính
 - Xây dựng và huấn luyện mô hình dự đoán/phân loại
@@ -57,18 +57,20 @@ Bộ dữ liệu sử dụng trong dự án này có thể được tải xuốn
 📊 **[Google Drive Dataset Link](https://drive.google.com/drive/folders/1gz-vo-YugcGh2BVRxsV1SfOOJ-CidT0Z?usp=sharing)**
 
 ### Cấu Trúc Dataset
-- **Số lượng mẫu**: [X samples]
-- **Số lượng feature**: [Y features]
-- **Nhãn/Classes**: [Mô tả nhãn]
+- **Số lượng mẫu**: 7760 bức ảnh tổng thể trong đó, số lượng ảnh trong thư mục train: 6219 - Số lượng ảnh trong thư mục val: 755 - Số lượng ảnh trong thư mục test: 786
+- **Nhãn/Classes**: 45 classes
 
 ## Cấu Trúc Dự Án
 
 ```
 .
-├── README.md              # Tài liệu dự án
-├── main.ipynb             # Notebook chính: preprocessing, training, evaluation
+├── README.md                # Tài liệu dự án
+├── main.ipynb               # Notebook chính: preprocessing, training, evaluation
+├── outputs/                 # Ảnh kết quả, biểu đồ, đánh giá
+├── embeddings/              # Embedding/gallery đã trích xuất
+├── checkpoints/             # Checkpoint huấn luyện (nếu có)
 └── saved_model/
-    └── best_vit_model.pth # Mô hình đã huấn luyện
+    └── best_vit_model.pth   # Mô hình đã huấn luyện
 ```
 
 ## Yêu Cầu Môi Trường
@@ -92,12 +94,34 @@ Các thư viện chính:
 
 ## Kết Quả
 
-- **Learning curves (7 epochs)**: loss giam dan (train/val ~3.58 -> ~3.35), accuracy tang dan (train ~0.11 -> ~0.24, val ~0.14 -> ~0.25).
-- **Confusion matrix**: duong cheo dam ro, da so lop duoc nhan dung; mot so lop nham lan nhe o ngoai duong cheo.
-- **Phan tach known/unknown**: phan bo cosine similarity tach biet ro; nguong toi uu tau ~0.66 de loai UNKNOWN.
-- **Suy luan mau**: cac truy van minh hoa cho thay du doan dung voi do tin cay cao cho lop known, UNKNOWN cho truong hop ngoai lop.
+- **Đường cong học (7 epochs)**: loss giảm dần (train/val ~3.58 -> ~3.35), accuracy tăng dần (train ~0.11 -> ~0.24, val ~0.14 -> ~0.25).
+- **Confusion matrix**: đường chéo đậm rõ, đa số lớp được nhận đúng; một số lớp nhầm lẫn nhẹ ở ngoài đường chéo.
+- **Phân tách known/unknown**: phân bố cosine similarity tách biệt rõ; ngưỡng tối ưu $\tau$ ~0.66 để loại UNKNOWN.
+- **Suy luận mẫu**: các truy vấn minh họa cho thấy dự đoán đúng với độ tin cậy cao cho lớp known, UNKNOWN cho trường hợp ngoài lớp.
 
-Ghi chu: cac bieu do loss/accuracy, confusion matrix, va phan bo cosine similarity duoc ve trong `main.ipynb`.
+![Learning curves](outputs/Loss_accuracy_curves/loss_accuracy_curves.png)
+
+![Confusion matrix](outputs/confusionmatrix_and_accuracy/confusion_matrix_image1.png)
+
+![Confusion matrix (normalized)](outputs/confusionmatrix_and_accuracy/confusion_matrix_normalized_1.png)
+
+![Open-set metrics](outputs/open_set_recognition_metrics/metrics.png)
+
+![Embedding visualization](outputs/embedding_visualization/embedding_visualization.png)
+
+![Embedding visualization (alt)](outputs/embedding_visualization/embedding_visualization2.png)
+
+![Prediction samples](outputs/predictions/testing_on_images.png)
+
+Ghi chú: các biểu đồ loss/accuracy, confusion matrix, và phân bố cosine similarity được vẽ trong main.ipynb.
+
+Nhận xét:
+- **Tổng quan**: Pipeline có tính hợp lý cho bài toán nhận diện nhân vật anime (ViT + fine-tune + embedding gallery + open-set gate). Các biểu đồ cho thấy mô hình đã học được biểu diễn có nghĩa.
+- **Độ phân tách lớp**: Confusion matrix tập trung trên đường chéo, và embedding visualization có xu hướng gom cụm theo lớp -> khả năng phân biệt tốt giữa các nhân vật chính.
+- **Open-set**: Histogram cosine similarity cho thấy có khoảng tách giữa known và unknown, phù hợp với cơ chế ngưỡng $\tau$ để từ chối nhân vật lạ.
+- **Dấu hiệu cần cải thiện**: Đường cong học vẫn tăng chậm và chưa hội tụ rõ ràng -> cần thêm dữ liệu, tăng epochs hợp lý, hoặc điều chỉnh learning rate/regularization.
+- **Rủi ro**: Mô hình có thể nhạy cảm với ảnh bị che mặt, góc mặt lạ, hoặc nhiều nhân vật có thiết kế giống nhau; cần đánh giá thêm trên tập test thực tế đa dạng.
+- **Khuyến nghị**: Thử tiền xử lý ổn định (face detect + align), bổ sung augmentations, và báo cáo thêm chỉ số macro-F1/Top-1 trên tập test độc lập.
 
 ## Tác Giả
 
@@ -105,4 +129,4 @@ Nguyễn Tấn Phúc Thịnh - 24521696
 
 ## Ghi Chú
 
-Mở rộng giúp nhận diện các nhận diện các nhân vật anime mới và deploy lên hugging face
+Mở rộng để nhận diện các nhân vật anime mới và triển khai lên Hugging Face
