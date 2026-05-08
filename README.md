@@ -2,7 +2,7 @@
 
 ## Mô Tả Bài Toán
 
-Dự án này nhằm giải quyết bài toán [**Điền tên bài toán của bạn**] bằng cách sử dụng các mô hình học máy hiện đại.
+Dự án này nhằm giải quyết bài toán nhân diện nhân vật anime bằng cách sử dụng các mô hình học máy hiện đại. 
 
 ### Mục Tiêu Chính
 - Xây dựng và huấn luyện mô hình dự đoán/phân loại
@@ -55,7 +55,7 @@ Các thư viện chính:
 
 ## Tác Giả
 
-[Tên của bạn]
+
 
 ## Ghi Chú
 
