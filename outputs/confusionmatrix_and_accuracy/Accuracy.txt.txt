@@ -1,0 +1,65 @@
+======================================================================
+CASCADE CLASSIFIER + VIT EVALUATION ON TEST FOLDER
+======================================================================
+
+Total evaluated images: 786
+Failed predictions: 0
+Accuracy       : 0.9389
+PrecisionMacro : 0.9426
+RecallMacro    : 0.9395
+F1Macro        : 0.9393
+
+Classification report:
+                                                          precision    recall  f1-score   support
+
+                              Anya Forger — Spy x Family       1.00      0.95      0.97        19
+                                         Aqua — Konosuba       1.00      0.90      0.95        21
+                          Asuna Yuuki — Sword Art Online       0.94      0.94      0.94        18
+                                     Darkness — Konosuba       1.00      1.00      1.00        17
+                                       Dio_brando - jojo       0.82      1.00      0.90        18
+                                         Emilia — ReZero       0.94      0.84      0.89        19
+                                                    Eren       0.90      1.00      0.95        18
+                               Erza Scarlet - Fairy Tail       0.95      1.00      0.97        19
+                  Frieren - Frieren beyond journey's end       1.00      0.90      0.95        20
+                            Gojo Satoru — Jujutsu Kaisen       0.81      0.89      0.85        19
+                           Gon Freecss — Hunter x Hunter       1.00      1.00      1.00        14
+                                Ken Kaneki — Tokyo Ghoul       1.00      0.89      0.94        18
+                                          Kenshin_Himura       1.00      1.00      1.00         8
+                                                 Lelouch       0.80      0.89      0.84        18
+                                            Light_Yagami       0.93      0.87      0.90        15
+                              Loid Forger — Spy x Family       1.00      0.93      0.97        15
+                       Megumi Fushiguro — Jujutsu Kaisen       1.00      0.89      0.94        19
+                                         Mikasa_Ackerman       0.87      1.00      0.93        20
+                                         Monkey_D._Luffy       0.94      0.94      0.94        17
+                                        Nami — One Piece       0.88      0.94      0.91        16
+                                  Nico Robin - One Piece       0.90      1.00      0.95        19
+                                            Rem — ReZero       0.95      1.00      0.97        19
+Rimuru Tempest — That Time I Got Reincarnated as a Slime       0.92      0.86      0.89        14
+                                         Shigeo_Kageyama       1.00      1.00      1.00        12
+                            Shinobu Kocho — Demon Slayer       0.90      1.00      0.95        19
+                                                Son_Goku       1.00      1.00      1.00        13
+                                    Vegeta — Dragon Ball       0.94      1.00      0.97        17
+                               Yor Forger — Spy x Family       1.00      0.88      0.93        16
+                           Yuji Itadori — Jujutsu Kaisen       0.94      0.89      0.91        18
+                                Zoro Roronoa — One Piece       0.84      0.94      0.89        17
+                                          alphonse_elric       0.93      0.93      0.93        14
+                                            edward_elric       0.95      0.95      0.95        20
+                                fern - sousou no frieren       0.95      1.00      0.97        18
+                                                  hioska       0.80      0.75      0.77        16
+                                         kamado_tanjirou       0.92      1.00      0.96        12
+                          kanroji mitsuri — Demon Slayer       1.00      1.00      1.00        19
+                                                  killua       0.95      1.00      0.98        21
+                                             kujo_jotaro       1.00      0.88      0.94        17
+                                         kurosaki_ichigo       0.88      0.79      0.83        19
+                            kyoko kirigiri - danganronpa       1.00      1.00      1.00        20
+                                                    levi       0.95      1.00      0.97        18
+                                                  nezuko       0.95      0.90      0.92        20
+                                             sailor_moon       1.00      1.00      1.00        24
+                                                 saitama       1.00      0.79      0.88        19
+                                          uzumaki_naruto       0.94      0.94      0.94        17
+
+                                                accuracy                           0.94       786
+                                               macro avg       0.94      0.94      0.94       786
+                                            weighted avg       0.94      0.94      0.94       786
+
+Confusion matrix shape: (45, 45)
