@@ -69,13 +69,21 @@ Bộ dữ liệu sử dụng trong dự án này có thể được tải xuốn
 ├── outputs/                 # Ảnh kết quả, biểu đồ, đánh giá
 ├── embeddings/              # Embedding/gallery đã trích xuất
 ├── checkpoints/             # Checkpoint huấn luyện (nếu có)
-└── saved_model/
+└── saved_model/ (Thư mục ẩn)
     └── best_vit_model.pth   # Mô hình đã huấn luyện
 ```
 
 ## Yêu Cầu Môi Trường
 
+- Python 3.9+ (khuyến nghị 3.10)
+- pip
+- (Tùy chọn) môi trường ảo: venv/conda
+
+Thiết lập nhanh (venv):
+
 ```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
