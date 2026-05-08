@@ -1,0 +1,45 @@
+0: Anya Forger — Spy x Family
+1: Aqua — Konosuba
+2: Asuna Yuuki — Sword Art Online
+3: Darkness — Konosuba
+4: Dio_brando - jojo
+5: Emilia — ReZero
+6: Eren
+7: Erza Scarlet - Fairy Tail
+8: Frieren - Frieren beyond journey's end
+9: Gojo Satoru — Jujutsu Kaisen
+10: Gon Freecss — Hunter x Hunter
+11: Ken Kaneki — Tokyo Ghoul
+12: Kenshin_Himura
+13: Lelouch
+14: Light_Yagami
+15: Loid Forger — Spy x Family
+16: Megumi Fushiguro — Jujutsu Kaisen
+17: Mikasa_Ackerman
+18: Monkey_D._Luffy
+19: Nami — One Piece
+20: Nico Robin - One Piece
+21: Rem — ReZero
+22: Rimuru Tempest — That Time I Got Reincarnated as a Slime
+23: Shigeo_Kageyama
+24: Shinobu Kocho — Demon Slayer
+25: Son_Goku
+26: Vegeta — Dragon Ball
+27: Yor Forger — Spy x Family
+28: Yuji Itadori — Jujutsu Kaisen
+29: Zoro Roronoa — One Piece
+30: alphonse_elric
+31: edward_elric
+32: fern - sousou no frieren
+33: hioska
+34: kamado_tanjirou
+35: kanroji mitsuri — Demon Slayer
+36: killua
+37: kujo_jotaro
+38: kurosaki_ichigo
+39: kyoko kirigiri - danganronpa
+40: levi
+41: nezuko
+42: sailor_moon
+43: saitama
+44: uzumaki_naruto
