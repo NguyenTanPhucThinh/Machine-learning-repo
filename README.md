@@ -68,9 +68,7 @@ Bộ dữ liệu sử dụng trong dự án này có thể được tải xuốn
 ├── main.ipynb               # Notebook chính: preprocessing, training, evaluation
 ├── outputs/                 # Ảnh kết quả, biểu đồ, đánh giá
 ├── embeddings/              # Embedding/gallery đã trích xuất
-├── checkpoints/             # Checkpoint huấn luyện (nếu có)
-└── saved_model/ (Thư mục ẩn)
-    └── best_vit_model.pth   # Mô hình đã huấn luyện
+└── checkpoints/             # Mô hình đã huấn luyện
 ```
 
 ## Yêu Cầu Môi Trường
@@ -151,3 +149,19 @@ Nguyễn Tấn Phúc Thịnh - 24521696
 ## Ghi Chú
 
 Mở rộng để nhận diện các nhân vật anime mới và triển khai lên Hugging Face
+
+REFACTOR LẠI TOÀN BỘ REPO
+
+THÊM CONFIG FILE (YAML/JSON) cho hyperparameters
+
+REEVALUATE LỖI SAI THẬT KỸ
+
+THÊM LICENSE
+
+class_names.txt nên nằm ở data/ hoặc assets/
+
+Thêm randomseed
+
+Thêm slide powerpoint để giới thiệu cụ thể chủ đề
+
+Một Makefile hoặc run.sh chạy được từ đầu đến cuối
