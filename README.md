@@ -107,7 +107,9 @@ Các thư viện chính:
 - **Phân tách known/unknown**: phân bố cosine similarity tách biệt rõ; ngưỡng tối ưu $\tau$ ~0.66 để loại UNKNOWN.
 - **Suy luận mẫu**: các truy vấn minh họa cho thấy dự đoán đúng với độ tin cậy cao cho lớp known, UNKNOWN cho trường hợp ngoài lớp.
 
-![Learning curves](outputs/Loss_accuracy_curves/loss_accuracy_curves.png)
+![Loss curves](outputs\Loss_accuracy_curves\loss_curves.png)
+
+![Accuracy curves](outputs\Loss_accuracy_curves\accuracy_curves.png)
 
 ![Confusion matrix](outputs/confusionmatrix_and_accuracy/confusion_matrix_image1.png)
 
