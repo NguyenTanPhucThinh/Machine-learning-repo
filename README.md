@@ -165,3 +165,5 @@ Thêm randomseed
 Thêm slide powerpoint để giới thiệu cụ thể chủ đề
 
 Một Makefile hoặc run.sh chạy được từ đầu đến cuối
+
+Thêm error analysis 
