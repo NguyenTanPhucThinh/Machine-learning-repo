@@ -101,7 +101,18 @@ Các thư viện chính:
 3. Mô hình sẽ được lưu vào `saved_model/best_vit_model.pth`
 
 ## Kết Quả
+### Pretrained Backbone và so sánh với Baseline model
 
+Chúng tôi sử dụng SmilingWolf/wd-vit-tagger-v3 làm pretrained backbone
+thay vì baseline để so sánh, do sự khác biệt về domain và objective giữa hai task:
+
+- Model gốc được thiết kế cho general anime tagging trên ~10k class
+- Model của chúng tôi được fine-tune cho identity recognition
+  trên 45 nhân vật cụ thể với open-set capability
+
+Việc so sánh accuracy trực tiếp sẽ không phản ánh đúng bản chất
+của hai bài toán. Thay vào đó, chúng tôi đánh giá hiệu quả của
+transfer learning từ backbone pretrained sang task cụ thể.
 - **Đường cong học ( epochs)**: loss giảm dần (train/val ~3.58 -> ~0.23), accuracy tăng dần (train ~0.11 -> ~0.95, val ~0.14 -> ~0.93).
 - **Confusion matrix**: đường chéo đậm rõ, đa số lớp được nhận đúng; một số lớp nhầm lẫn nhẹ ở ngoài đường chéo.
 - **Phân tách known/unknown**: phân bố cosine similarity tách biệt rõ; ngưỡng tối ưu $\tau$ ~0.66 để loại UNKNOWN.
