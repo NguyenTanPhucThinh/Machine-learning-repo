@@ -102,14 +102,14 @@ Các thư viện chính:
 
 ## Kết Quả
 
-- **Đường cong học (7 epochs)**: loss giảm dần (train/val ~3.58 -> ~3.35), accuracy tăng dần (train ~0.11 -> ~0.24, val ~0.14 -> ~0.25).
+- **Đường cong học ( epochs)**: loss giảm dần (train/val ~3.58 -> ~0.23), accuracy tăng dần (train ~0.11 -> ~0.95, val ~0.14 -> ~0.93).
 - **Confusion matrix**: đường chéo đậm rõ, đa số lớp được nhận đúng; một số lớp nhầm lẫn nhẹ ở ngoài đường chéo.
 - **Phân tách known/unknown**: phân bố cosine similarity tách biệt rõ; ngưỡng tối ưu $\tau$ ~0.66 để loại UNKNOWN.
 - **Suy luận mẫu**: các truy vấn minh họa cho thấy dự đoán đúng với độ tin cậy cao cho lớp known, UNKNOWN cho trường hợp ngoài lớp.
 
-![Loss curves](outputs\Loss_accuracy_curves\loss_curves.png)
+![Loss curves](outputs/Loss_accuracy_curves/loss_curves.png)
 
-![Accuracy curves](outputs\Loss_accuracy_curves\accuracy_curves.png)
+![Accuracy curves](outputs/Loss_accuracy_curves/accuracy_curves.png)
 
 ![Confusion matrix](outputs/confusionmatrix_and_accuracy/confusion_matrix_image1.png)
 
